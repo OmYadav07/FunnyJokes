@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funny Jokes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .joke {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .setup {
+            font-weight: bold;
+        }
+        #joke-button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Funny Jokes</h1>
+    <div id="joke-container" class="joke"></div>
+    <button id="joke-button">Show me a joke!</button>
+
+    <script>
+        const jokes = [
+            {
+                setup: "Why don’t scientists trust atoms?",
+                punchline: "Because they make up everything!"
+            },
+            {
+                setup: "I told my computer I needed a break.",
+                punchline: "Now it won’t stop sending me beach wallpapers."
+            },
+            {
+                setup: "Why did the scarecrow win an award?",
+                punchline: "Because he was outstanding in his field!"
+            },
+            {
+                setup: "I would tell you a joke about an elevator,",
+                punchline: "but it’s an uplifting experience."
+            },
+            {
+                setup: "Why did the bicycle fall over?",
+                punchline: "Because it was two-tired!"
+            },
+            {
+                setup: "I used to play piano by ear,",
+                punchline: "but now I use my hands."
+            },
+            {
+                setup: "Why don’t skeletons fight each other?",
+                punchline: "They don’t have the guts!"
+            },
+            {
+                setup: "What do you call fake spaghetti?",
+                punchline: "An impasta!"
+            },
+            {
+                setup: "Why did the math book look sad?",
+                punchline: "Because it had too many problems."
+            },
+            {
+                setup: "I’m reading a book on anti-gravity.",
+                punchline: "It’s impossible to put down!"
+            },
+            {
+                setup: "Why did the golfer bring two pairs of pants?",
+                punchline: "In case he got a hole in one!"
+            },
+            {
+                setup: "What do you call cheese that isn’t yours?",
+                punchline: "Nacho cheese!"
+            },
+            {
+                setup: "Why can’t you give Elsa a balloon?",
+                punchline: "Because she will let it go!"
+            },
+            {
+                setup: "What did one wall say to the other wall?",
+                punchline: "I’ll meet you at the corner!"
+            },
+            {
+                setup: "Why did the coffee file a police report?",
+                punchline: "It got mugged!"
+            },
+            {
+                setup: "What do you call a bear with no teeth?",
+                punchline: "A gummy bear!"
+            },
+            {
+                setup: "Why don’t some couples go to the gym?",
+                punchline: "Because some relationships don’t work out!"
+            },
+            {
+                setup: "What do you call a factory that makes good products?",
+                punchline: "A satisfactory!"
+            },
+            {
+                setup: "Why did the computer go to therapy?",
+                punchline: "It had too many bytes!"
+            },
+            {
+                setup: "What do you call a snowman with a six-pack?",
+                punchline: "An abdominal snowman!"
+            }
+        ];
+
+        let currentJokeIndex = -1;
+
+        document.getElementById('joke-button').addEventListener('click', function() {
+            currentJokeIndex = (currentJokeIndex + 1) % jokes.length;
+            const joke = jokes[currentJokeIndex];
+            document.getElementById('joke-container').innerHTML = `<div class="setup">${joke.setup}</div><div>${joke.punchline}</div>`;
+        });
+    </script>
+</body>
+</html>
